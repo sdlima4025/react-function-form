@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button, Switch, FormControlLabel } from "@mui/material/";
 
 // FORMULÁRIOS CONTROLADOS
-function FormularioCadastro() {
+function FormularioCadastro({aoEnviar}) {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
@@ -13,7 +13,7 @@ function FormularioCadastro() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log({nome, sobrenome, cpf, promocoes, novidades});
+        aoEnviar({nome, sobrenome, cpf, promocoes, novidades});
       }}
     >
       <TextField
