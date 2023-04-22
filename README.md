@@ -10,6 +10,16 @@ Como utilizar um container para ajudar a posição dos elementos
 
 Utilizando elementos de tipografia
 
+O que é um formulário não controlado
+
+Problemas com mais de uma fonte de verdade
+
+Hooks e o useState
+
+Desconstrução de Arrays
+
+Assincronicidade da função de atribuição do estado
+
 MaterialUI Switchs e FormLabelControl
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
