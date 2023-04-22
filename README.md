@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+Como se encontrar na documentação do Material UI
+
+Como utilizar diversos componentes com o MaterialUI
+
+Mais propriedades do TextField
+
+Como utilizar um container para ajudar a posição dos elementos
+
+Utilizando elementos de tipografia
+
+MaterialUI Switchs e FormLabelControl
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

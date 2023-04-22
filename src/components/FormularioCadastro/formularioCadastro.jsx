@@ -1,12 +1,49 @@
-import * as React from "react";
+import  React, {useState} from "react";
 import { TextField, Button, Switch, FormControlLabel } from "@mui/material/";
 
+// FORMULÁRIOS CONTROLADOS
 function FormularioCadastro() {
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
+
   return (
-    <form  >
-      <TextField id="nome" label="Nome" margin="normal" autoFocus fullWidth />
-      <TextField id="sobrenome" label="Sobrenome" margin="normal" fullWidth />
-      <TextField id="cpf" label="CPF" margin="normal" fullWidth />
+    <form 
+      onSubmit={(event) =>{
+        event.preventDefault();
+        console.log(nome, sobrenome)
+        
+      }}
+      >
+      <TextField 
+      value={nome}
+      onChange={(event) => {
+        let tmpNome = event.target.value;
+          if(tmpNome.length >= 3) {
+            tmpNome = tmpNome.substr(0,3);
+          }
+          setNome(tmpNome);
+      }}
+      id="nome" 
+      label="Nome"
+      margin="normal" 
+      autoFocus 
+      fullWidth />
+
+      <TextField 
+      value={sobrenome}
+      onChange={(event) => {
+        setSobrenome(event.target.value);
+      }}
+      id="sobrenome" 
+      label="Sobrenome" 
+      margin="normal" 
+      fullWidth />
+
+      <TextField 
+      id="cpf" 
+      label="CPF" 
+      margin="normal" 
+      fullWidth />
 
       <FormControlLabel
         label="Promoções"
@@ -18,7 +55,7 @@ function FormularioCadastro() {
       />
 
       <Button type="submit" variant="contained" color="primary">
-        Enviar
+        Cadastrar
       </Button>
     </form>
   );
