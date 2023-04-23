@@ -30,6 +30,14 @@ Como receber propriedades em um componente de função
 
 Desconstrução de Objetos no JS
 
+Propriedade erro do TextField e HelperText dentro de inputs do MaterialUI
+
+Usando o estado para controlar a exibição de erros
+
+Recebendo validação de maneira externa
+
+Como deixar os componentes mais reutilizáveis
+
 MaterialUI Switchs e FormLabelControl
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
