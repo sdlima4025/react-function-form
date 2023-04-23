@@ -38,6 +38,10 @@ Recebendo validação de maneira externa
 
 Como deixar os componentes mais reutilizáveis
 
+Boas práticas de UX ao trabalharmos com formulários
+
+Por que separar um formulário em muitas partes
+
 MaterialUI Switchs e FormLabelControl
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
