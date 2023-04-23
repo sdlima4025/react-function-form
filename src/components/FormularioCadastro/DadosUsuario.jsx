@@ -20,7 +20,10 @@ function DadosUsuario() {
         autoFocus
         fullWidth
       />
-      <Button type="submit" variant="contained" color="primary">
+      <Button 
+      type="submit" 
+      variant="contained" 
+      color="primary">
         Cadastrar
       </Button>
     </form>
