@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { TextField, Button, Switch, FormControlLabel } from "@mui/material/";
 
 // FORMULÁRIOS CONTROLADOS
-function DadosPessoais({aoEnviar, validarCPF}) {
+function DadosPessoais({aoEnviar, validacoes}) {
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
@@ -10,6 +10,13 @@ function DadosPessoais({aoEnviar, validarCPF}) {
   const [novidades, setNovidades] = useState(true);
   const [erros, setErros] = useState({cpf:{valido:true, texto:""}})
 
+
+  function validarCampos(event) {
+    const{name, value} = event.target;
+    const novoEstado = {...erros}
+    novoEstado[name] = validacoes[name](value);
+    setErros(novoEstado)
+  }
   return (
     <form
       onSubmit={(event) => {
@@ -47,13 +54,11 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         onChange={(event) => {
           setCpf(event.target.value);
         }}
-        onBlur={(event) => {
-          const ehValido = validarCPF(cpf);
-          setErros({cpf:ehValido})
-        }}
+        onBlur= {validarCampos}
         error={!erros.cpf.valido}
         helperText = {erros.cpf.texto}
         id="cpf"
+        name="cpf"
         label="CPF"
         required
         margin="normal"
