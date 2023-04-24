@@ -8,6 +8,7 @@ function DadosEntrega() {
       id="cep" 
       label="CEP" 
       type="number" 
+      required
       margin="normal" 
       autoFocus />
 
@@ -15,6 +16,7 @@ function DadosEntrega() {
         id="endereco"
         label="Endereço"
         type="text"
+        required
         margin="normal"
         autoFocus
         fullWidth
@@ -24,6 +26,7 @@ function DadosEntrega() {
         id="numero"
         label="Numero"
         type="number"
+        required
         margin="normal"
         autoFocus
       />
@@ -32,6 +35,7 @@ function DadosEntrega() {
         id="estado"
         label="Estado"
         type="text"
+        required
         margin="normal"
         autoFocus
       />
@@ -40,6 +44,7 @@ function DadosEntrega() {
         id="cidade"
         label="Cidade"
         type="text"
+        required
         margin="normal"
         autoFocus
       />

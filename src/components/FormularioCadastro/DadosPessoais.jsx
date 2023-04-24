@@ -25,6 +25,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         id="nome"
         label="Nome"
         margin="normal"
+        required
         autoFocus
         fullWidth
       />
@@ -36,6 +37,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         }}
         id="sobrenome"
         label="Sobrenome"
+        required
         margin="normal"
         fullWidth
       />
@@ -53,6 +55,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         helperText = {erros.cpf.texto}
         id="cpf"
         label="CPF"
+        required
         margin="normal"
         fullWidth
       />
