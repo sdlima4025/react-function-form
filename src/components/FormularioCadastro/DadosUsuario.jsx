@@ -7,18 +7,8 @@ function DadosUsuario({aoEnviar}) {
   const[email, setEmail] = useState("");
   const[senha, setSenha] = useState("");
   const validacoes = useContext(ValidacoesCadastro)
-  const [erros, ValidarCampos] = useErros(validacoes);
+  const [erros, ValidarCampos, possoEnviar] = useErros(validacoes);
   
-
-  function possoEnviar() {
-    for(let campo in erros) {
-      if(!erros[campo].valido)
-      {
-        return false;
-      }
-    }
-    return true;
-  }
   return (
     <form onSubmit={(event) => {
       event.preventDefault();
@@ -28,7 +18,9 @@ function DadosUsuario({aoEnviar}) {
     }}>
       <TextField
         value={email}
-        onChange={(event)=> {setEmail(event.target.value)}}
+        onChange={(event)=> {
+          setEmail(event.target.value)
+        }}
         id="email"
         label="email"
         type="email"
@@ -40,7 +32,8 @@ function DadosUsuario({aoEnviar}) {
       />
       <TextField
         value={senha}
-        onChange={(event)=> {setSenha(event.target.value)
+        onChange={(event)=> {
+          setSenha(event.target.value)
         }}
         onBlur={ValidarCampos}
         error={!erros.senha.valido}

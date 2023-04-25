@@ -62,6 +62,14 @@ Ciclo de vida dos componentes funcionais
 
 Como utilizar o componente Stepper do MaterialUI
 
+Como usar valore padrão dentro de um contexto
+
+Porque precisamos de Providers e quais suas vantagens
+
+Como criar Hooks Customizados e quais são suas regras
+
+Como compartilhar código entre componentes de maneira apropriada
+
 ######################################################################
 MaterialUI Switchs e FormLabelControl
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
